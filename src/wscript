@@ -1,0 +1,8 @@
+#! python
+
+import uuid
+import platform
+
+def build(ctx):
+    ctx.recurse('analysis')
+    ctx.recurse('final')
