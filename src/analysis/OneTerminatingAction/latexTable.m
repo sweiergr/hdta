@@ -199,17 +199,38 @@ end
 
 % make table header lines:
 hLine = '\hline';
+
+% =============================== move the caption and label part to the front of
+% table body==============================================================%
+% ========== change made by Chao Wang ====================================%
 if input.tableBorders ==1
 	header = ['\begin{tabular}','{|',repmat([input.tableColumnAlignment,'|'],1,size(C,2)),'}'];
-	latex = {['\begin{table}',input.tablePlacement];'\centering';header};
+	latex = {['\begin{table}',input.tablePlacement];'\centering';['\caption{',input.tableCaption,'}']; ...
+    ['\label{table:',input.tableLabel,'}'];header};
 elseif input.tableBorders ==3
 	header = ['\begin{tabular}','{',repmat(input.tableColumnAlignment,1,size(C,2)),'}'];
-	latex = {['\begin{table}',input.tablePlacement];'\centering';header;hLine};
+	latex = {['\begin{table}',input.tablePlacement];'\centering';['\caption{',input.tableCaption,'}']; ...
+    ['\label{table:',input.tableLabel,'}'];header;hLine};
 else
 	header = ['\begin{tabular}','{',repmat(input.tableColumnAlignment,1,size(C,2)),'}'];
-	latex = {['\begin{table}',input.tablePlacement];'\centering';header};
+	latex = {['\begin{table}',input.tablePlacement];'\centering';['\caption{',input.tableCaption,'}']; ...
+    ['\label{table:',input.tableLabel,'}'];header};
 end
-
+% ================ original case =========================================%
+% if input.tableBorders ==1
+% 	header = ['\begin{tabular}','{|',repmat([input.tableColumnAlignment,'|'],1,size(C,2)),'}'];
+% 	latex = {['\begin{table}',input.tablePlacement];'\centering';header};
+% elseif input.tableBorders ==3
+% 	header = ['\begin{tabular}','{',repmat(input.tableColumnAlignment,1,size(C,2)),'}'];
+% 	latex = {['\begin{table}',input.tablePlacement];'\centering';header;hLine};
+% else
+% 	header = ['\begin{tabular}','{',repmat(input.tableColumnAlignment,1,size(C,2)),'}'];
+% 	latex = {['\begin{table}',input.tablePlacement];'\centering';header};
+% end
+% ================ original case end======================================%
+% =============================== move the caption and label part to the front of
+% table body==============================================================%
+% ========== change made by Chao Wang ====================================%
 
 % generate table
 if input.booktabs
@@ -250,15 +271,28 @@ if input.booktabs
     latex(end+1) = {'\bottomrule'};
 end   
 
-
+% =============================== move the caption and label part to the front of
+% table body==============================================================%
+% ========== change made by Chao Wang ====================================%
 % make footer lines for table:
-tableFooter = {'\end{tabular}';['\caption{',input.tableCaption,'}']; ...
-    ['\label{table:',input.tableLabel,'}'];'\end{table}'};
+tableFooter = {'\end{tabular}';'\end{table}'};
 if input.tableBorders
     latex = [latex;{hLine};tableFooter];
 else
     latex = [latex;tableFooter];
 end
+% ================ original case =========================================%
+% tableFooter = {'\end{tabular}';['\caption{',input.tableCaption,'}']; ...
+%     ['\label{table:',input.tableLabel,'}'];'\end{table}'};
+% if input.tableBorders
+%     latex = [latex;{hLine};tableFooter];
+% else
+%     latex = [latex;tableFooter];
+% end
+% ================ original case end======================================%
+% =============================== move the caption and label part to the front of
+% table body==============================================================%
+% ========== change made by Chao Wang ====================================%
 
 % add code if a complete latex document should be created:
 if input.makeCompleteLatexDocument

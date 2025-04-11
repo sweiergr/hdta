@@ -3,7 +3,6 @@
 
 """
 import numpy as np
-from project_paths import project_paths_join
 from bld.project_paths import project_paths_join
 #print("BLD IMPORT SUCCESSFUL!")
 from matplotlib import pyplot as plt
