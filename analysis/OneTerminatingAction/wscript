@@ -1,0 +1,53 @@
+#! python
+
+from typing import Text
+import uuid
+
+
+def build(ctx):
+
+    ctx(features='run_m_script',
+        source='OneTerminatingAction/DDCOneTerminate.m',
+        target=[
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'ols_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'md_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'md_table_data_naive.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'md_rn_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'mle_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'mle_norm_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'mle_normTerm_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'mle_naive_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'mle_rn_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'mle_rn_eD_table_data.csv'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'L3naive_data.mat'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'P4_data.mat'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'fig1Data.mat'),
+            ctx.path_to(ctx, 'OUT_ANALYSIS', 'CCPCounterdiffData.mat'),
+            ctx.path_to(ctx, 'OUT_TABLES', 'singularityQ.tex'),
+            ctx.path_to(ctx, 'OUT_TABLES', 'singularityOmega.tex'),
+            ctx.path_to(ctx, 'OUT_TABLES', 'verifiedDF.tex'),
+            ctx.path_to(ctx, 'OUT_TABLES', 'CCPdifference.tex'),
+            ctx.path_to(ctx, 'OUT_TABLES', 'Uverify.tex'),
+            ctx.path_to(ctx, 'OUT_TABLES', 'bdEst.mat')
+        ],
+        deps=[
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/backInduction.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/bellman.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/CCP_generator.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/EstMD_LastPeriods.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/EstOLS_LastPeriods.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/EstMD_LastPeriods_restriction.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/flowpayoffs.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/latexTable.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/MLEstimation.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/nLogLik.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/randomdiscrete.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/simulateData_CCP.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/verification_naive.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/verification_sophi.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/CCP_output.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/RecoverCCP.m'),
+            ctx.path_to(ctx, 'IN_ANALYSIS','OneTerminatingAction/logitfit.m')
+            ],
+        name='DDCOneTerminate'
+    )

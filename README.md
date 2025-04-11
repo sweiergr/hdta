@@ -1,5 +1,5 @@
 # Identification of Dynamic Discrete Choice Models Using a Terminating Action
-This repository contains the simulation code for "Identification of Dynamic Discrete Choice Model with Hyperbolic Discounting Using a Terminating Action" by Wang, Weiergraeber, and Xiao (2023).
+This repository contains the simulation code for "Identification of Dynamic Discrete Choice Model with Hyperbolic Discounting Using a Terminating Action" by Wang, Weiergraeber, and Xiao (2025). Parts of this code build on  "Dynamic Discrete Choice Models: Methods, Matlab Code, and Exercises" by Jaap H. Abbring and Tobias J. Klein, which is available at http://ddc.abbring.org.
 
 
 ## Overview
@@ -14,12 +14,12 @@ You should expect the simulation code to run for less than one hour on a modern 
 ## Software Requirements
 In this section, we list all the software that is necessary to build the replication package. The code does not install these packages.. Please install each of the software and required packages manually before running the code.
 
-- Python (code was last run using Anaconda Python 3.8.5, which should come with most of the required packages by default.) **Important: Some of the waf code is likely incompatible with Python 3.11.**
+- Python (code was last run using Anaconda Python 3.10.14, which should come with most of the required packages by default.) **Important: Some of the waf code is likely incompatible with Python 3.11.**
   - matplotlib 3.3.2
   – numpy 1.19.2
   – pandas 1.1.3
   – scipy 1.5.2
-- Matlab (code was last run using Release 2020a)
+- Matlab (code was last run using Release 2024b)
 
 ## Memory and Runtime Requirements
 The code was last run on a 6-core Intel-based iMac with
@@ -38,6 +38,7 @@ step will also create the corresponding folder structure within a ```bld```-fold
 - Please note that this version of the waf-template is incompatible with Python 3.11.
 
 ## References
+1. Abbring, Jaap, Klein, Tobias. Dynamic Discrete Choice Models: Methods, Matlab Code, and Exercises, available at http://ddc.abbring.org.
 1. Gaudecker, Hans-Martin von (2019). Templates for Reproducible Research
 Projects in Economics (v0.1). https://doi.org/10.5281/zenodo.2533241/.
-1. Wang, Chao, Weiergraeber, Stefan, Ruli Xiao (2023). Identification of Dynamic Discrete Choice Models Using a Terminating Action. https://sweiergr.github.io/publication/hyperbolicdiscountingta/hyperbolicDiscountingTA.pdf.
+1. Wang, Chao, Weiergraeber, Stefan, Ruli Xiao (2025). Identification of Dynamic Discrete Choice Models Using a Terminating Action. https://sweiergr.github.io/publication/hyperbolicdiscountingta/hyperbolicDiscountingTA.pdf.
