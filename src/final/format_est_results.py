@@ -18,7 +18,7 @@ table_row_SSres = """{var} & & {val1:.4f}{str1} & {val2: .4f}{str2} & {val3: .4f
 # Write Table D.1.
 ols_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'ols_table_data.csv'))
 # Write the results to a LaTeX table.
-with open(project_paths_join('OUT_TABLES', 'estOLS_L3_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD1.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -38,7 +38,7 @@ with open(project_paths_join('OUT_TABLES', 'estOLS_L3_new.tex'), 'w') as tex_fil
 
 # Write Table D.2.
 md_sophi_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'md_table_data.csv'))
-with open(project_paths_join('OUT_TABLES', 'estMD_sophi_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD2.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -59,7 +59,7 @@ with open(project_paths_join('OUT_TABLES', 'estMD_sophi_new.tex'), 'w') as tex_f
 
 # Write Table D.6.
 md_rn_sophi_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'md_rn_table_data.csv'))
-with open(project_paths_join('OUT_TABLES', 'estMD_rn_sophi_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD6.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -78,7 +78,7 @@ with open(project_paths_join('OUT_TABLES', 'estMD_rn_sophi_new.tex'), 'w') as te
 
 # Write Table D.8.
 md_naive_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'md_table_data_naive.csv'))
-with open(project_paths_join('OUT_TABLES', 'estMD_naive_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD8.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -97,7 +97,7 @@ with open(project_paths_join('OUT_TABLES', 'estMD_naive_new.tex'), 'w') as tex_f
 
 # Write Table D.3.
 mle_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'mle_table_data.csv'))
-with open(project_paths_join('OUT_TABLES', 'estMLE_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD3.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -118,7 +118,7 @@ with open(project_paths_join('OUT_TABLES', 'estMLE_new.tex'), 'w') as tex_file:
 # Write Table D.9.
 mle_naive_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'mle_naive_table_data.csv'))
 # Write the results to a LaTeX table.
-with open(project_paths_join('OUT_TABLES', 'estMLE_naive_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD9.tex'), 'w') as tex_file:
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
     tex_file.write(table_row_header.format(val1='True value', val2='$N=10,000$', val3='$N=20,000$',val4='$N=30,000$'))
@@ -138,7 +138,7 @@ with open(project_paths_join('OUT_TABLES', 'estMLE_naive_new.tex'), 'w') as tex_
 # Write Table D.5.
 mle_norm_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'mle_norm_table_data.csv'))
 table_row_var = """{var} & {val0:.2f} & {val1:.4f}{str1} & {val2: .4f}{str2} & {val3: .4f}{str3} \\tabularnewline\n & & ({se1:.1e}) & ({se2:.1e}) & ({se3:.1e}) \\tabularnewline\n"""
-with open(project_paths_join('OUT_TABLES', 'estMLE_norm_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD5.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -158,7 +158,7 @@ with open(project_paths_join('OUT_TABLES', 'estMLE_norm_new.tex'), 'w') as tex_f
 
 # Write Table D.4.
 mle_normTerm_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'mle_normTerm_table_data.csv'))
-with open(project_paths_join('OUT_TABLES', 'estMLE_normTerm_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD4.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -180,7 +180,7 @@ table_row_var = """{var} & {val0:.2f} & {val1:.4f}{str1} & {val2: .4f}{str2} & {
 
 # Write Table D.7.
 mle_rn_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'mle_rn_table_data.csv'))
-with open(project_paths_join('OUT_TABLES', 'estMLE_rn_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD7.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|ccc}\n\\toprule\n')
     # Header row with column names.
@@ -205,7 +205,7 @@ table_row_var = """{var} & {val0:.2f} & {val1:.4f}{str1} & {val2: .4f}{str2} & {
 # Write Table D.10.
 mle_rn_eD_data = pd.read_csv(project_paths_join('OUT_ANALYSIS', 'mle_rn_eD_table_data.csv'))
 # Write the results to a LaTeX table.
-with open(project_paths_join('OUT_TABLES', 'estMLE_rn_eD_new.tex'), 'w') as tex_file:
+with open(project_paths_join('OUT_TABLES', 'TableD10.tex'), 'w') as tex_file:
     # Top of table.
     tex_file.write('\\begin{tabular}{lc|cccc}\n\\toprule\n')
     # Header row with column names.

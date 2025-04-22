@@ -29,7 +29,7 @@ plt.contour(bb_data, dd_data, objfun_data,colors='k',linewidths=0.4,levels = con
 fig.colorbar(cax)
 ax.set_ylabel(r'$\delta$')
 ax.set_xlabel(r'$\beta$')
-plt.savefig(project_paths_join('OUT_FIGURES', 'UdistanceNaiveL3.pdf'), bbox_inches ='tight')
+plt.savefig(project_paths_join('OUT_FIGURES', 'FigureE4.pdf'), bbox_inches ='tight')
 
 ## Create heatmap for Figure E.3
 # Load data from MATLAB export.
@@ -51,7 +51,7 @@ plt.contour(bb_data, dd_data, objfun_data,colors='k',linewidths=0.4,levels = con
 fig.colorbar(cax)
 ax.set_ylabel(r'$\delta$')
 ax.set_xlabel(r'$\beta$')
-plt.savefig(project_paths_join('OUT_FIGURES', 'UdistanceP4.pdf'), bbox_inches ='tight')
+plt.savefig(project_paths_join('OUT_FIGURES', 'FigureE3.pdf'), bbox_inches ='tight')
 ####### END PLOTTING CODE FOR HEATMAPS #########################################
 
 ################################################################################
@@ -95,7 +95,7 @@ for i, val in enumerate(supportX):
 	handles, labels = axs[row_idx,col_idx].get_legend_handles_labels()
 fig.legend(handles, labels, loc='lower center',ncol=3,bbox_to_anchor=(0.5, -0.075) )
 fig.tight_layout()
-plt.savefig(project_paths_join('OUT_FIGURES', 'CCPAdoption.pdf'), bbox_inches ='tight')
+plt.savefig(project_paths_join('OUT_FIGURES', 'FigureD1.pdf'), bbox_inches ='tight')
 
 ## Create Figure D.2
 # Load data from MATLAB export.
@@ -136,6 +136,6 @@ for i, val in enumerate(supportX):
 	handles, labels = axs[row_idx,col_idx].get_legend_handles_labels()
 fig.legend(handles, labels, loc='lower center',ncol=3,bbox_to_anchor=(0.5, -0.075) )
 fig.tight_layout()
-plt.savefig(project_paths_join('OUT_FIGURES', 'CCPAdoption_counter_diff.pdf'), bbox_inches ='tight')
+plt.savefig(project_paths_join('OUT_FIGURES', 'FigureD2.pdf'), bbox_inches ='tight')
 
 
